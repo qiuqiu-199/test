@@ -1,0 +1,400 @@
+manifest
+- package: com.fsck.k9
+- platformBuildVersionName: 8.1.0
+- versionName: 5.600
+- platformBuildVersionCode: 27
+- versionCode: 26000
+	uses-sdk
+	- minSdkVersion: 15
+	- targetSdkVersion: 22
+	uses-feature
+	- name: android.hardware.touchscreen
+	- required: false
+	supports-screens
+	- normalScreens: true
+	- smallScreens: true
+	- anyDensity: true
+	- largeScreens: true
+	uses-permission
+	- name: android.permission.RECEIVE_BOOT_COMPLETED
+	uses-permission
+	- name: android.permission.READ_CONTACTS
+	uses-permission
+	- name: android.permission.READ_SYNC_SETTINGS
+	uses-permission
+	- name: android.permission.WRITE_CONTACTS
+	uses-permission
+	- name: android.permission.ACCESS_NETWORK_STATE
+	uses-permission
+	- name: android.permission.INTERNET
+	uses-permission
+	- name: android.permission.VIBRATE
+	uses-permission
+	- name: android.permission.WAKE_LOCK
+	uses-permission
+	- name: android.permission.WRITE_EXTERNAL_STORAGE
+	permission
+	- name: com.fsck.k9.permission.REMOTE_CONTROL
+	- description: 2131100471
+	- label: 2131100472
+	- protectionLevel: 1
+	- permissionGroup: android.permission-group.MESSAGES
+	uses-permission
+	- name: com.fsck.k9.permission.REMOTE_CONTROL
+	permission
+	- name: com.fsck.k9.permission.READ_MESSAGES
+	- description: 2131100456
+	- label: 2131100457
+	- protectionLevel: 1
+	- permissionGroup: android.permission-group.MESSAGES
+	uses-permission
+	- name: com.fsck.k9.permission.READ_MESSAGES
+	permission
+	- name: com.fsck.k9.permission.DELETE_MESSAGES
+	- description: 2131100075
+	- label: 2131100076
+	- protectionLevel: 1
+	- permissionGroup: android.permission-group.MESSAGES
+	uses-permission
+	- name: com.fsck.k9.permission.DELETE_MESSAGES
+	application
+	- allowBackup: false
+	- icon: 2130837626
+	- name: com.fsck.k9.K9
+	- theme: 2131230761
+	- label: 2131099977
+	- allowTaskReparenting: false
+	- resizeableActivity: true
+		meta-data
+		- name: android.app.default_searchable
+		- value: com.fsck.k9.activity.Search
+		activity
+		- name: com.fsck.k9.activity.Accounts
+		- launchMode: 1
+		- configChanges: 4
+		- label: 2131099977
+		- uiOptions: 1
+			intent-filter
+				action
+				- name: android.intent.action.MAIN
+				category
+				- name: android.intent.category.DEFAULT
+				category
+				- name: android.intent.category.LAUNCHER
+		activity
+		- name: com.fsck.k9.activity.setup.Prefs
+		- configChanges: 4
+		- excludeFromRecents: true
+		- label: 2131100439
+		- taskAffinity: com.fsck.k9.activity.setup.Prefs
+		activity
+		- name: com.fsck.k9.activity.setup.WelcomeMessage
+		- configChanges: 4
+		- label: 2131100637
+		activity
+		- name: com.fsck.k9.activity.setup.OpenPgpAppSelectDialog
+		- configChanges: 4
+		- theme: 2131230732
+		activity
+		- name: com.fsck.k9.activity.setup.FontSizeSettings
+		- configChanges: 4
+		- label: 2131100197
+		activity
+		- name: com.fsck.k9.activity.setup.AccountSetupBasics
+		- configChanges: 4
+		- label: 2131099842
+		activity
+		- name: com.fsck.k9.activity.setup.AccountSetupAccountType
+		- configChanges: 4
+		- label: 2131099829
+		activity
+		- name: com.fsck.k9.activity.setup.AccountSetupIncoming
+		- configChanges: 4
+		- label: 2131099884
+		activity
+		- name: com.fsck.k9.activity.setup.AccountSetupComposition
+		- configChanges: 4
+		- label: 2131099687
+		activity
+		- name: com.fsck.k9.activity.setup.AccountSetupOutgoing
+		- configChanges: 4
+		- label: 2131099934
+		activity
+		- name: com.fsck.k9.activity.setup.AccountSetupOptions
+		- configChanges: 4
+		- label: 2131099926
+		activity
+		- name: com.fsck.k9.activity.setup.AccountSetupNames
+		- configChanges: 4
+		- label: 2131099895
+		activity
+		- name: com.fsck.k9.activity.ChooseAccount
+		- noHistory: true
+		- configChanges: 4
+		- theme: 2131230762
+		- label: 2131099991
+		activity
+		- name: com.fsck.k9.activity.ChooseFolder
+		- noHistory: true
+		- configChanges: 4
+		- theme: 2131230762
+		- label: 2131099992
+		activity
+		- name: com.fsck.k9.activity.ChooseIdentity
+		- configChanges: 4
+		- theme: 2131230762
+		- label: 2131099993
+		activity
+		- name: com.fsck.k9.activity.ManageIdentities
+		- configChanges: 4
+		- label: 2131100322
+		activity
+		- name: com.fsck.k9.activity.EditIdentity
+		- configChanges: 4
+		- label: 2131100111
+		activity
+		- name: com.fsck.k9.activity.NotificationDeleteConfirmation
+		- launchMode: 1
+		- theme: 16973840
+		- excludeFromRecents: true
+		- taskAffinity: 
+		activity
+		- name: com.fsck.k9.activity.setup.AccountSetupCheckSettings
+		- configChanges: 164
+		- label: 2131099849
+		activity
+		- name: com.fsck.k9.activity.setup.AccountSettings
+		- configChanges: 4
+		- label: 2131099815
+		activity
+		- name: com.fsck.k9.activity.setup.FolderSettings
+		- configChanges: 4
+		- theme: 16973835
+		- label: 2131100165
+		activity
+		- name: com.fsck.k9.activity.FolderList
+		- configChanges: 4
+		- uiOptions: 1
+			intent-filter
+				action
+				- name: android.intent.action.MAIN
+		activity
+		- name: com.fsck.k9.activity.MessageList
+		- launchMode: 1
+		- configChanges: 4
+		- uiOptions: 1
+			intent-filter
+				action
+				- name: android.intent.action.MAIN
+			intent-filter
+				action
+				- name: android.intent.action.VIEW
+				data
+				- scheme: email
+				- host: messages
+				category
+				- name: android.intent.category.DEFAULT
+		activity
+		- name: com.fsck.k9.activity.MessageCompose
+		- configChanges: 4
+		- label: 2131099977
+		- enabled: false
+			intent-filter
+				action
+				- name: android.intent.action.SENDTO
+				data
+				- scheme: mailto
+				category
+				- name: android.intent.category.DEFAULT
+			intent-filter
+				action
+				- name: android.intent.action.SEND
+				data
+				- mimeType: */*
+				category
+				- name: android.intent.category.DEFAULT
+			intent-filter
+				action
+				- name: android.intent.action.SEND_MULTIPLE
+				data
+				- mimeType: */*
+				category
+				- name: android.intent.category.DEFAULT
+			intent-filter
+				action
+				- name: android.intent.action.VIEW
+				data
+				- scheme: mailto
+				category
+				- name: android.intent.category.DEFAULT
+				category
+				- name: android.intent.category.BROWSABLE
+			intent-filter
+				action
+				- name: org.autocrypt.PEER_ACTION
+				category
+				- name: android.intent.category.DEFAULT
+		activity
+		- name: com.fsck.k9.activity.Search
+		- configChanges: 4
+		- label: 2131100482
+		- uiOptions: 1
+			intent-filter
+				action
+				- name: android.intent.action.SEARCH
+				category
+				- name: android.intent.category.DEFAULT
+			meta-data
+			- name: android.app.searchable
+			- resource: 2131034121
+		activity
+		- name: com.fsck.k9.activity.LauncherShortcuts
+		- configChanges: 4
+		- label: 2131100538
+			intent-filter
+				action
+				- name: android.intent.action.CREATE_SHORTCUT
+				category
+				- name: android.intent.category.DEFAULT
+		activity
+		- name: com.fsck.k9.activity.EmailAddressList
+		- configChanges: 4
+		activity
+		- name: com.fsck.k9.activity.UnreadWidgetConfiguration
+			intent-filter
+				action
+				- name: android.appwidget.action.APPWIDGET_CONFIGURE
+		activity
+		- name: com.fsck.k9.activity.UpgradeDatabases
+		- label: 2131100613
+		receiver
+		- name: com.fsck.k9.service.BootReceiver
+		- enabled: true
+			intent-filter
+				action
+				- name: android.intent.action.BOOT_COMPLETED
+			intent-filter
+				action
+				- name: android.intent.action.DEVICE_STORAGE_LOW
+			intent-filter
+				action
+				- name: android.intent.action.DEVICE_STORAGE_OK
+			intent-filter
+				action
+				- name: android.net.conn.CONNECTIVITY_CHANGE
+			intent-filter
+				action
+				- name: android.net.conn.BACKGROUND_DATA_SETTING_CHANGED
+			intent-filter
+				action
+				- name: com.android.sync.SYNC_CONN_STATUS_CHANGED
+		receiver
+		- name: com.fsck.k9.service.RemoteControlReceiver
+		- permission: com.fsck.k9.permission.REMOTE_CONTROL
+		- enabled: true
+			intent-filter
+				action
+				- name: com.fsck.k9.K9RemoteControl.set
+			intent-filter
+				action
+				- name: com.fsck.k9.K9RemoteControl.requestAccounts
+		receiver
+		- exported: false
+		- name: com.fsck.k9.service.CoreReceiver
+		receiver
+		- name: com.fsck.k9.service.StorageReceiver
+		- enabled: true
+			intent-filter
+				action
+				- name: android.intent.action.MEDIA_MOUNTED
+				data
+				- scheme: file
+		receiver
+		- icon: 2130837626
+		- name: com.fsck.k9.provider.UnreadWidgetProvider
+		- label: 2131100607
+			intent-filter
+				action
+				- name: android.appwidget.action.APPWIDGET_UPDATE
+			meta-data
+			- name: android.appwidget.provider
+			- resource: 2131034124
+		receiver
+		- icon: 2130837630
+		- name: com.fsck.k9.widget.list.MessageListWidgetProvider
+		- label: 2131100312
+			intent-filter
+				action
+				- name: android.appwidget.action.APPWIDGET_UPDATE
+			meta-data
+			- name: android.appwidget.provider
+			- resource: 2131034119
+		service
+		- name: com.fsck.k9.widget.list.MessageListWidgetService
+		- permission: android.permission.BIND_REMOTEVIEWS
+		- enabled: true
+		service
+		- name: com.fsck.k9.service.MailService
+		- enabled: true
+		service
+		- name: com.fsck.k9.notification.NotificationActionService
+		- enabled: true
+		service
+		- name: com.fsck.k9.service.PushService
+		- enabled: true
+		service
+		- name: com.fsck.k9.service.PollService
+		- enabled: true
+		service
+		- name: com.fsck.k9.service.RemoteControlService
+		- permission: com.fsck.k9.permission.REMOTE_CONTROL
+		- enabled: true
+		service
+		- name: com.fsck.k9.service.SleepService
+		- enabled: true
+		service
+		- exported: false
+		- name: com.fsck.k9.service.DatabaseUpgradeService
+		provider
+		- exported: false
+		- name: com.fsck.k9.provider.AttachmentProvider
+		- grantUriPermissions: true
+		- authorities: com.fsck.k9.attachmentprovider
+			meta-data
+			- name: de.cketti.safecontentresolver.ALLOW_INTERNAL_ACCESS
+			- value: true
+		provider
+		- exported: false
+		- name: com.fsck.k9.provider.RawMessageProvider
+		- authorities: com.fsck.k9.rawmessageprovider
+			meta-data
+			- name: de.cketti.safecontentresolver.ALLOW_INTERNAL_ACCESS
+			- value: true
+		provider
+		- exported: true
+		- grantUriPermissions: true
+		- readPermission: com.fsck.k9.permission.READ_MESSAGES
+		- name: com.fsck.k9.provider.MessageProvider
+		- multiprocess: true
+		- writePermission: com.fsck.k9.permission.DELETE_MESSAGES
+		- authorities: com.fsck.k9.messageprovider
+		provider
+		- exported: false
+		- name: com.fsck.k9.provider.EmailProvider
+		- authorities: com.fsck.k9.provider.email
+		provider
+		- exported: false
+		- name: com.fsck.k9.provider.DecryptedFileProvider
+		- grantUriPermissions: true
+		- authorities: com.fsck.k9.decryptedfileprovider
+			meta-data
+			- name: android.support.FILE_PROVIDER_PATHS
+			- resource: 2131034115
+		provider
+		- exported: false
+		- name: com.fsck.k9.provider.AttachmentTempFileProvider
+		- grantUriPermissions: true
+		- authorities: com.fsck.k9.tempfileprovider
+			meta-data
+			- name: android.support.FILE_PROVIDER_PATHS
+			- resource: 2131034122
